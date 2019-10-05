@@ -35,23 +35,25 @@ silahkan compress File gambar dengan format factory atau sejenisnya
       <link rel="stylesheet" href="css/icons.css">
       <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
       <link rel="stylesheet" href="owl-carousel/owl.theme.css">
+<!-- 	js untuk deteksi ipadd, negara, dll   -->
+	  <script src="js/jquery.min.js"></script>
       <!-- CUSTOM STYLE -->
       <link rel="stylesheet" href="css/template-style.css">
       <link rel="stylesheet" href="css/font.css">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>  
+<!-- 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>   -->
         <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
         <script type="text/javascript" src="js/jquery-ui.min.js"></script>    
         <script type="text/javascript" src="js/template-scripts.js"></script> 
     </head>
    <body class="size-1140">
       <!-- Cek Keamanan Alat Komunikasi Anda -->
-	    <div>Country: <span id="country"></span></div>
-	    <div>State: <span id="state"></span></div>
-	    <div>City: <span id="city"></span></div>
-	    <div>Postal: <span id="postal"></span></div>
-	    <div>Latitude: <span id="latitude"></span></div>
-	    <div>Longitude: <span id="longitude"></span></div>
-	    <div>IP: <span id="ipv4"></span></div>
+	    <div>Negara: <span id="country"></span></div>
+	    <div>Ibukota: <span id="state"></span></div>
+	    <div>Kota: <span id="city"></span></div>
+	    <div>Kode Pos: <span id="postal"></span></div>
+	    <div>Garis Lintang: <span id="latitude"></span></div>
+	    <div>Garis Bujur: <span id="longitude"></span></div>
+	    <div>IP Address: <span id="ipv4"></span></div>
 	    <script>
 		$.ajax({
 			url: "https://geoip-db.com/jsonp",
@@ -66,7 +68,7 @@ silahkan compress File gambar dengan format factory atau sejenisnya
 				$('#longitude').html(location.longitude);
 				$('#ipv4').html(location.IPv4);  
 			}
-		});		
+		});			
 	    </script>
       <!-- Selesai Cek Keamanan Alat Komunikasi Anda -->   
       <!-- TOP NAV WITH LOGO -->
