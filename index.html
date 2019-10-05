@@ -36,7 +36,10 @@ silahkan compress File gambar dengan format factory atau sejenisnya
       <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
       <link rel="stylesheet" href="owl-carousel/owl.theme.css">
 <!-- 	js untuk deteksi ipadd, negara, dll   -->
-	  <script src="js/jquery.min.js"></script>
+	<script src="js/jquery.min.js"></script>
+<!-- 	js untuk deteksi device(mobile-detect)   -->
+	<script src="js/mobile-detect/jquery-2.1.4.js"></script>
+  	<script src="js/mobile-detect/mobile-detect.js"></script>
       <!-- CUSTOM STYLE -->
       <link rel="stylesheet" href="css/template-style.css">
       <link rel="stylesheet" href="css/font.css">
@@ -71,6 +74,25 @@ silahkan compress File gambar dengan format factory atau sejenisnya
 		});			
 	    </script>
       <!-- Selesai Cek Keamanan Alat Komunikasi Anda -->   
+	<!-- 	Mobile-Detect    -->
+	   	<div id="navbar"><span>Mobile-detect.js</span></div>
+  		<div id="wrapper">
+    		<button id="detect-button">Detect Device</button>
+  		</div>
+  
+  		<script>
+          $('#detect-button').click(function(){
+            
+            var detector = new MobileDetect(window.navigator.userAgent)
+            document.write( "Mobile: " + detector.mobile());
+            document.write( "Phone: " + detector.phone());
+            document.write( "Tablet: " + detector.tablet());
+            document.write( "OS: " + detector.os());
+            document.write( "userAgent: " + detector.userAgent());
+            
+          });
+  		</script>
+	<!-- 	end Mobile-Detect    -->
       <!-- TOP NAV WITH LOGO -->
       <header>
          <div id="topbar">
