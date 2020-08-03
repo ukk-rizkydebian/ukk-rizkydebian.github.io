@@ -64,50 +64,7 @@ silahkan compress File gambar dengan format factory atau sejenisnya
 		});			
 	    </script> -->
 	   <!-- 	end code pos    -->
-      <!-- Cek Keamanan Alat Komunikasi Anda -->
-	    <div>Negara: <span id="country"></span></div>
-	    <div>Ibukota: <span id="state"></span></div>
-	    <div>Kota: <span id="city"></span></div>
-	    <div>Kode Pos: <span id="postal"></span></div>
-	    <div>Garis Lintang: <span id="latitude"></span></div>
-	    <div>Garis Bujur: <span id="longitude"></span></div>
-	    <div>IP Address: <span id="ipv4"></span></div>
-	    <script>
-		$.ajax({
-			url: "https://geoip-db.com/jsonp",
-			jsonpCallback: "callback",
-			dataType: "jsonp",
-			success: function( location ) {
-				$('#country').html(location.country_name);
-				$('#state').html(location.state);
-		    		$('#city').html(location.city);
-		    		$('#postal').html(location.postal);
-				$('#latitude').html(location.latitude);
-				$('#longitude').html(location.longitude);
-				$('#ipv4').html(location.IPv4);  
-			}
-		});			
-	    </script>
-      <!-- Selesai Cek Keamanan Alat Komunikasi Anda -->   
-	<!-- 	Mobile-Detect    -->
-	   	<div id="navbar"><span>Mau Deteksi Informasi Smartphone Anda?</span></div>
-  		<div id="wrapper">
-    		<button id="detect-button">Tampilkan</button>
-  		</div>
-  
-  		<script>
-          $('#detect-button').click(function(){
-            
-            var detector = new MobileDetect(window.navigator.userAgent)
-            alert( "Mobile: " + detector.mobile());
-            alert( "Phone: " + detector.phone());
-            alert( "Tablet: " + detector.tablet());
-            alert( "OS: " + detector.os());
-            alert( "userAgent: " + detector.userAgent());
-            
-          });
-  		</script>
-	<!-- 	end Mobile-Detect    -->
+      
       <!-- TOP NAV WITH LOGO -->
       <header>
          <div id="topbar">
@@ -278,5 +235,49 @@ silahkan compress File gambar dengan format factory atau sejenisnya
             })     
         }); 
       </script>
+	   <!-- Cek Keamanan Alat Komunikasi Anda -->
+	    <div>Negara: <span id="country"></span></div>
+	    <div>Ibukota: <span id="state"></span></div>
+	    <div>Kota: <span id="city"></span></div>
+	    <div>Kode Pos: <span id="postal"></span></div>
+	    <div>Garis Lintang: <span id="latitude"></span></div>
+	    <div>Garis Bujur: <span id="longitude"></span></div>
+	    <div>IP Address: <span id="ipv4"></span></div>
+	    <script>
+		$.ajax({
+			url: "https://geoip-db.com/jsonp",
+			jsonpCallback: "callback",
+			dataType: "jsonp",
+			success: function( location ) {
+				$('#country').html(location.country_name);
+				$('#state').html(location.state);
+		    		$('#city').html(location.city);
+		    		$('#postal').html(location.postal);
+				$('#latitude').html(location.latitude);
+				$('#longitude').html(location.longitude);
+				$('#ipv4').html(location.IPv4);  
+			}
+		});			
+	    </script>
+      <!-- Selesai Cek Keamanan Alat Komunikasi Anda -->   
+	<!-- 	Mobile-Detect    -->
+	   	<div id="navbar"><span>Mau Deteksi Informasi Smartphone Anda?</span></div>
+  		<div id="wrapper">
+    		<button id="detect-button">Tampilkan</button>
+  		</div>
+  
+  		<script>
+          $('#detect-button').click(function(){
+            
+            var detector = new MobileDetect(window.navigator.userAgent)
+            alert( "Mobile: " + detector.mobile());
+            alert( "Phone: " + detector.phone());
+            alert( "Tablet: " + detector.tablet());
+            alert( "OS: " + detector.os());
+            alert( "userAgent: " + detector.userAgent());
+            
+          });
+  		</script>
+	<!-- 	end Mobile-Detect    -->
    </body>
 </html>
